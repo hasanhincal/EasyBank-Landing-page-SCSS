@@ -1,0 +1,49 @@
+.articles{
+    background-color: $veryLightGray;
+    &_container{
+        &_content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+       
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2,1fr);    
+        }
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(4,1fr);
+        }
+        &_card{
+            border-radius: 15px 15px 0 0 ;
+            box-shadow: -6px 5px 17px -3px rgba(26,15,26,1);
+            transition: all .3s ease-in-out;
+            &:hover{
+                transform: scaleY(1.05);
+                
+            }
+           
+            &_item{
+                background-color: rgb(255, 255, 255);
+                &-image{
+                height: 250px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 15px 15px 0 0 ;
+               }
+            }
+            &_text{
+                padding: 1.3rem;
+                & h3{
+                    font-size: 18px;
+                    margin: .5rem 0;
+                    line-height: 1.5;
+                }
+                & p{
+                    font-size: 13px;
+                }
+            }
+        }
+           
+        }
+    }
+}
