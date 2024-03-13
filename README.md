@@ -8,4 +8,5 @@ Codded in HTML5, CSS3 and SCSS
 
 <h2>Screen Gif</h2>
 
-![](screen1.gif)
+![](screen1.gif)# EasyBank-Landing-page-SCSS
+# EasyBank-Landing-page-SCSS
