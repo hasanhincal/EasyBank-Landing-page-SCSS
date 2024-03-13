@@ -345,6 +345,19 @@ button:hover,
   font-size: 13px;
 }
 
+.footer_container_content_copy a:hover, .footer_container_content_social a:hover, .footer_container_content_inner_list1 a:hover, .footer_container_content_inner_list2 a:hover {
+  color: crimson;
+}
+
+.footer_container_content_copy a, .footer_container_content_social a, .footer_container_content_inner_list1 a, .footer_container_content_inner_list2 a {
+  transition: all 0.3s ease-in-out;
+}
+
+.footer_container_content_inner_list1, .footer_container_content_inner_list2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   background-color: hsl(233, 26%, 24%);
   height: 100%;
@@ -355,18 +368,34 @@ button:hover,
 .footer_container_content {
   padding: 1.5rem 0 0.1rem 0;
 }
-.footer_container_content_inner_list1, .footer_container_content_inner_list2 {
+.footer_container_content_inner {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+}
+@media screen and (max-width: 576px) {
+  .footer_container_content_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.footer_container_content_inner_list1, .footer_container_content_inner_list2 {
   text-align: left;
   line-height: 1.5;
 }
+@media screen and (max-width: 576px) {
+  .footer_container_content_inner_list1, .footer_container_content_inner_list2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    line-height: 2.3;
+  }
+}
 .footer_container_content_inner_list1 a, .footer_container_content_inner_list2 a {
   color: white;
-  transition: all 0.3s ease-in-out;
-}
-.footer_container_content_inner_list1 a:hover, .footer_container_content_inner_list2 a:hover {
-  color: crimson;
 }
 .footer_container_content_social {
   display: inline-block;
@@ -375,20 +404,14 @@ button:hover,
 .footer_container_content_social a {
   padding: 0 0.8rem;
   color: white;
-  transition: all 0.3s ease-in-out;
   font-size: 1rem;
 }
 .footer_container_content_social a:hover {
   font-size: 1.2rem;
-  color: crimson;
 }
 .footer_container_content_copy {
   color: white;
 }
 .footer_container_content_copy a {
   color: white;
-  transition: all 0.3s ease-in-out;
-}
-.footer_container_content_copy a:hover {
-  color: crimson;
 }/*# sourceMappingURL=style.css.map */

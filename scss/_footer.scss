@@ -1,3 +1,14 @@
+%hover {
+  color: crimson;
+}
+%hover-time {
+  transition: all 0.3s ease-in-out;
+}
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   background-color: $darkBlue;
   height: 100%;
@@ -6,18 +17,33 @@
     &_content {
       padding: 1.5rem 0 0.1rem 0;
       &_inner {
-        &_list1,
-        &_list2 {
+        display: flex;
+        justify-content: space-around;
+        @media screen and (max-width: 576px) {
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        &_list1,
+        &_list2 {
+          @extend %flex-column;
           text-align: left;
           line-height: 1.5;
+          @media screen and (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            flex-wrap: wrap;
+            line-height: 2.3;
+          }
           & a {
             color: white;
-            transition: all 0.3s ease-in-out;
+            @extend %hover-time;
           }
           & a:hover {
-            color: crimson;
+            @extend %hover;
           }
         }
       }
@@ -27,11 +53,11 @@
         & a {
           padding: 0 0.8rem;
           color: white;
-          transition: all 0.3s ease-in-out;
+          @extend %hover-time;
           font-size: 1rem;
           &:hover {
             font-size: 1.2rem;
-            color: crimson;
+            @extend %hover;
           }
         }
       }
@@ -39,9 +65,9 @@
         color: white;
         & a {
           color: white;
-          transition: all 0.3s ease-in-out;
+          @extend %hover-time;
           &:hover {
-            color: crimson;
+            @extend %hover;
           }
         }
       }
